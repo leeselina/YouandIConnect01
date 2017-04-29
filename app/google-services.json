@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "989544332428",
+    "firebase_url": "https://youandiconnect01.firebaseio.com",
+    "project_id": "youandiconnect01",
+    "storage_bucket": "youandiconnect01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989544332428:android:453a7d8edc305359",
+        "android_client_info": {
+          "package_name": "com.example.sungeun.youandiconnect01"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989544332428-q7punqp5d3fsqqg4stn26tmucahibcup.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sungeun.youandiconnect01",
+            "certificate_hash": "9be01faeedf323cd1c82f0342ad7c3283e73bc04"
+          }
+        },
+        {
+          "client_id": "989544332428-qtoquvedhjq4qt2rmrhae081mfetpll0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTtzETkb0h0T4dTtiNAB9DkR6VITW7Ut8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "989544332428-qtoquvedhjq4qt2rmrhae081mfetpll0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
