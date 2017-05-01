@@ -11,8 +11,6 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.sungeun.youandiconnect01.activity.BaseActivity;
-import com.facebook.AccessToken;
-import com.facebook.login.LoginManager;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
@@ -21,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity{
 
     FirebaseUser mFirebaseUser;
     /**
@@ -35,8 +33,6 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Button logoutbtn = (Button) findViewById(R.id.logout_button);
 
         FirebaseAuth.getInstance();
 
@@ -68,12 +64,31 @@ public class MainActivity extends BaseActivity {
             usernameTextView.setText(mUsername);
 
             Toast.makeText(this, mUsername + "님 환영합니다.", Toast.LENGTH_SHORT).show();
-
         }
+
+
+
+        //계정연결되어 있는데 로그아웃버튼 누르면 로그인 인증 및 토큰 지우기.
+        Button logoutbtn = (Button) findViewById(R.id.logout_button);
+        logoutbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    FirebaseUser user = mFirebaseAuth.getCurrentUser();
+                    if (user != null) {
+                        // User is signed in
+                    } else {
+                        // User is signed out
+                        mFirebaseAuth.getInstance().signOut();
+                    }
+            }
+
+        });
+
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
+
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.

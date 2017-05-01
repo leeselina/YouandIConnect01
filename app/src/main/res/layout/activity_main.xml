@@ -42,8 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="채팅하기"
-                android:layout_marginBottom="20dp"
-                android:layout_gravity="center"/>
+                android:layout_marginBottom="20dp"/>
 
             <Button
                 android:id="@+id/logout_button"
