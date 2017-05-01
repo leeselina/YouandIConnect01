@@ -1,4 +1,4 @@
-package com.example.sungeun.youandiconnect01;
+package com.example.sungeun.youandiconnect01.model;
 
 import java.util.HashMap;
 

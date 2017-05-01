@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.sungeun.youandiconnect01.activity.BaseActivity;
+import com.facebook.AccessToken;
+import com.facebook.login.LoginManager;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
@@ -20,7 +22,6 @@ import com.google.firebase.auth.FirebaseUser;
 
 
 public class MainActivity extends BaseActivity {
-
 
     FirebaseUser mFirebaseUser;
     /**
@@ -35,6 +36,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button logoutbtn = (Button) findViewById(R.id.logout_button);
 
         FirebaseAuth.getInstance();
 
@@ -46,7 +48,7 @@ public class MainActivity extends BaseActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ChatActivity.class);
                 startActivity(intent);
-                //로그인된 이후 채팅버튼 누르면 사용자 정보 그대로 가져오기
+                //로그인된 이후 채팅버튼 누르면 사용자 정보 그대로 가져오기?
             }
         });
 
@@ -66,7 +68,6 @@ public class MainActivity extends BaseActivity {
             usernameTextView.setText(mUsername);
 
             Toast.makeText(this, mUsername + "님 환영합니다.", Toast.LENGTH_SHORT).show();
-
 
         }
         // ATTENTION: This was auto-generated to implement the App Indexing API.
