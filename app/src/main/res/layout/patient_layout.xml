@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/patientLayout">
+
+    <EditText
+        android:layout_width="131dp"
+        android:layout_height="27dp"
+        android:text="SEOUL"
+        android:ems="10"
+        tools:layout_editor_absoluteY="122dp"
+        tools:layout_editor_absoluteX="136dp"
+        android:id="@+id/user_height"
+        android:inputType="number" />
+
+    <EditText
+        android:layout_width="131dp"
+        android:layout_height="27dp"
+        android:text="SEOUL"
+        android:ems="10"
+        tools:layout_editor_absoluteY="196dp"
+        tools:layout_editor_absoluteX="136dp"
+        android:id="@+id/user_recent"
+        android:inputType="number" />
+
+    <EditText
+        android:layout_width="131dp"
+        android:layout_height="27dp"
+        android:inputType="textPersonName"
+        android:text="SEOUL"
+        android:ems="10"
+        tools:layout_editor_absoluteY="231dp"
+        tools:layout_editor_absoluteX="136dp"
+        android:id="@+id/user_method" />
+
+    <EditText
+        android:layout_width="131dp"
+        android:layout_height="27dp"
+        android:text="SEOUL"
+        android:ems="10"
+        tools:layout_editor_absoluteY="157dp"
+        tools:layout_editor_absoluteX="136dp"
+        android:id="@+id/user_weight"
+        android:inputType="number" />
+
+    <EditText
+        android:layout_width="131dp"
+        android:layout_height="27dp"
+        android:inputType="textPersonName"
+        android:text="SEOUL"
+        android:ems="10"
+        tools:layout_editor_absoluteY="75dp"
+        tools:layout_editor_absoluteX="136dp"
+        android:id="@+id/user_address" />
+
+    <EditText
+        android:layout_width="131dp"
+        android:layout_height="27dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        tools:layout_editor_absoluteY="32dp"
+        tools:layout_editor_absoluteX="136dp"
+        android:id="@+id/user_name" />
+
+    <TextView
+        android:text="본명"
+        android:layout_width="101dp"
+        android:layout_height="27dp"
+        tools:layout_editor_absoluteY="32dp"
+        tools:layout_editor_absoluteX="11dp"
+        android:id="@+id/textView2" />
+
+    <TextView
+        android:text="몸무게"
+        android:layout_width="101dp"
+        android:layout_height="27dp"
+        tools:layout_editor_absoluteY="157dp"
+        tools:layout_editor_absoluteX="11dp"
+        android:id="@+id/textView3" />
+
+    <TextView
+        android:text="최근판정병기"
+        android:layout_width="101dp"
+        android:layout_height="27dp"
+        tools:layout_editor_absoluteY="196dp"
+        tools:layout_editor_absoluteX="11dp"
+        android:id="@+id/textView6" />
+
+    <TextView
+        android:text="수술날짜"
+        android:layout_width="101dp"
+        android:layout_height="27dp"
+        tools:layout_editor_absoluteY="266dp"
+        tools:layout_editor_absoluteX="11dp"
+        android:id="@+id/textView8" />
+
+    <TextView
+        android:text="수술방법"
+        android:layout_width="101dp"
+        android:layout_height="27dp"
+        tools:layout_editor_absoluteY="231dp"
+        tools:layout_editor_absoluteX="11dp"
+        android:id="@+id/textView7" />
+
+    <TextView
+        android:text="키"
+        android:layout_width="101dp"
+        android:layout_height="27dp"
+        tools:layout_editor_absoluteY="122dp"
+        tools:layout_editor_absoluteX="11dp"
+        android:id="@+id/textView5" />
+
+    <TextView
+        android:text="거주지역"
+        android:layout_width="101dp"
+        android:layout_height="27dp"
+        tools:layout_editor_absoluteY="75dp"
+        tools:layout_editor_absoluteX="11dp"
+        android:id="@+id/textView4" />
+
+    <EditText
+        android:layout_width="136dp"
+        android:layout_height="34dp"
+        android:ems="10"
+        tools:layout_editor_absoluteY="265dp"
+        tools:layout_editor_absoluteX="137dp"
+        android:id="@+id/user_date"
+        android:inputType="text" />
+
+</android.support.constraint.ConstraintLayout>

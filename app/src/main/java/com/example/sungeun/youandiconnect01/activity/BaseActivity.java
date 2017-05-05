@@ -13,7 +13,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class BaseActivity extends AppCompatActivity {
     public FirebaseAuth mFirebaseAuth;
-    FirebaseDatabase firebaseDatabase;
+    public FirebaseDatabase firebaseDatabase;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

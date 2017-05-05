@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_mode"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sungeun.youandiconnect01.ModeActivity">
+
+    <TextView
+        android:text="가입 모드 선택"
+        android:layout_width="103dp"
+        android:layout_height="21dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="141dp"
+        android:id="@+id/textView" />
+
+    <Button
+        android:text="Registeration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="459dp"
+        tools:layout_editor_absoluteX="128dp"
+        android:id="@+id/registerBtn" />
+
+    <RadioGroup
+        android:id="@+id/radioButtonGroup"
+        android:orientation="horizontal"
+        android:layout_height="35dp"
+        tools:layout_editor_absoluteY="29dp"
+        tools:layout_editor_absoluteX="71dp"
+        android:layout_width="243dp" >
+
+        <RadioButton
+            android:text="Patient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/patientRadio"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="Trainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/trainerRadio"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="352dp"
+        android:layout_height="400dp"
+        tools:layout_editor_absoluteY="64dp"
+        tools:layout_editor_absoluteX="16dp"
+        android:id="@+id/fl">
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

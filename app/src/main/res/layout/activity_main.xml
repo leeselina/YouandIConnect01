@@ -19,13 +19,13 @@
             android:paddingBottom="@dimen/activity_vertical_margin"
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
-            android:paddingTop="150dp">
+            android:paddingTop="50dp">
 
             <TextView
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/app_name"/>
+                android:text="Home"/>
 
             <ImageView
                 android:id="@+id/photo_imageview"
@@ -37,19 +37,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-            <Button
-                android:id="@+id/chatting"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="채팅하기"
-                android:layout_marginBottom="20dp"/>
 
-            <Button
-                android:id="@+id/logout_button"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/logout" />
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/chatting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="채팅하기"
+                    android:layout_marginBottom="20dp"/>
+
+                <Button
+                    android:id="@+id/logout_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/logout" />
+
+            </LinearLayout>
+
 
         </LinearLayout>
+
+
     </LinearLayout>
 </ScrollView>

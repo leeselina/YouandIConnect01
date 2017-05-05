@@ -33,6 +33,7 @@ public class MainActivity extends BaseActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("홈");
 
         FirebaseAuth.getInstance();
 
@@ -76,9 +77,12 @@ public class MainActivity extends BaseActivity{
                     FirebaseUser user = mFirebaseAuth.getCurrentUser();
                     if (user != null) {
                         // User is signed in
+                        mFirebaseAuth.getInstance().signOut();
+                        finish();
+                        Intent intent = new Intent(MainActivity.this, SignInActivity.class);
+                        startActivity(intent);
                     } else {
                         // User is signed out
-                        mFirebaseAuth.getInstance().signOut();
                     }
             }
 

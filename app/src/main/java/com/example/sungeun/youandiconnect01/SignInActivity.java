@@ -26,7 +26,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.GoogleAuthProvider;
 
 public class SignInActivity extends BaseActivity implements GoogleApiClient.OnConnectionFailedListener {
 
@@ -50,7 +49,7 @@ public class SignInActivity extends BaseActivity implements GoogleApiClient.OnCo
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-        setTitle("너와나의 연결고리 Login");
+        setTitle("Login");
 
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
         if (mFirebaseUser == null){
@@ -163,8 +162,12 @@ public class SignInActivity extends BaseActivity implements GoogleApiClient.OnCo
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             if ( result.isSuccess() ) {
                 String token = result.getSignInAccount().getIdToken();
-                AuthCredential credential = GoogleAuthProvider.getCredential(token, null);
-                mFirebaseAuth.signInWithCredential(credential);
+
+                Intent intent = new Intent(this, ModeActivity.class);
+
+                intent.putExtra("google_token", token);
+
+                startActivity(intent);
             }
             else {
                 Log.d(TAG, "Google Login Failed." + result.getStatus());

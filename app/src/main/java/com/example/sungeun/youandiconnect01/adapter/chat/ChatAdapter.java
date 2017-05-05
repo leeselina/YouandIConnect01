@@ -11,10 +11,8 @@ import com.example.sungeun.youandiconnect01.model.Chat;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 
-/**
- * Created by baghyeongi on 2017. 4. 7..
- */
 
 public class ChatAdapter extends RecyclerView.Adapter<ChatViewHolder> {
 
@@ -23,7 +21,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatViewHolder> {
     String uid;
     Context context;
 
-    public ChatAdapter(Context context, String uid) {
+    public ChatAdapter(Context context, DatabaseReference databaseReference, String uid) {
 
         this.uid = uid;
         this.context = context;
@@ -54,6 +52,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatViewHolder> {
             public void onCancelled(DatabaseError databaseError) {
             }
         };
+        databaseReference.addChildEventListener(childEventListener);
     }
 
     @Override

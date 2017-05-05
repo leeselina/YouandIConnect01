@@ -32,8 +32,8 @@ public class ChatViewHolder extends RecyclerView.ViewHolder {
         }
 
         name.setText(chat.getName());
-        content.setText(chat.getMessage());
-//        time.setText(chat.getTime());
+        content.setText(chat.getContent());
+        time.setText(chat.getTime());
 
     }
 
